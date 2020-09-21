@@ -1,0 +1,35 @@
+<idea-plugin>
+  <id>com.github.flerro.ddbmapping</id>
+  <name>DynamoDb Mapping</name>
+  <version>1.0</version>
+  <vendor email="francesco.lerro+plugin@gmail.com" url="http://www.rolandfg.net">Francesco Lerro</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      20.09.2020 - 1.0.0 - Initial release<br/>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="173.0"/>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="ddbmapping"
+            class="com.github.flerro.ddbmapping.Action"
+            text="DynamoDB marshall/unmarshall" description="${project.description}">
+      <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup2"/>
+    </action>
+  </actions>
+
+</idea-plugin>
